@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Application todo List</title>
+    <link rel="stylesheet" href="style.css
+    ">
+</head>
+<body>
+    <div class="container">
+        <h1>Ma todo List</h1>
+
+        <!-- Notification pour les messages -->
+        <div id="notification" class="notification"></div>
+
+        <form id="todo-form">
+            <input type="hidden" id="task-id" value="">
+            <div class="form-group">
+                <label for="title">Titre de la tâche :</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description :</label>
+                <input type="text" id="description" name="description">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-primary" id="add-btn">Ajouter</button>
+                <button type="button" class="btn-primary" id="update-btn" style="display:none;">Mettre à jour</button>
+                <button type="reset" class="btn-danger" id="cancel-btn">Annuler</button>
+            </div>
+        </form>
+
+        <div class="loading-spinner" id="loading-spinner">
+            <div class="spinner"></div>
+            <p>Chargement en cours...</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list">
+                <!-- Les tâches seront ajoutées ici dynamiquement -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        
+    </script>
+    <script src="get.js"></script>
+</body>
+</html>
